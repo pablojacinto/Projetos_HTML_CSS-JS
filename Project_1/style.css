@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+* {
+   box-sizing: border-box;
+}
+
+body {
+   font-family: 'Muli', sans-serif;
+   margin: 0;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   height: 100vh;
+   overflow: hidden;
+}
+
+.panel2 {
+   background-image: url('https://www.neoenergia.com/pt-br/te-interessa/meio-ambiente/PublishingImages/caatinga-carateristicas-do-bioma.jpg');
+}
+
+.panel3 {
+   background-image: url('https://www.melhoresdestinos.com.br/wp-content/uploads/2020/06/praias-brasil-sancho.jpg');
+}
+
+.container {
+   display: flex;
+   width: 90vw;
+   overflow: hidden;
+}
+
+.panel {
+   background-size: auto 100%;
+   background-position: center;
+   background-repeat: no-repeat;
+   height: 80vh;
+   border-radius: 50px;
+   color: white;
+   cursor: pointer;
+   flex: 0.2;
+   margin: 15px;
+   position: relative;
+   transition: flex 0.7s ease-in;
+   overflow: hidden;
+}
+
+.panel h3 {
+   font-size: 24px;
+   position: absolute;
+   bottom: 60px;
+   left: 200px;
+   margin: 0;
+   opacity: 0;
+}
+
+.panel.active {
+   flex: 2;
+   overflow: hidden;
+}
+
+.panel.active h3 {
+   opacity: 1;
+}
+
+@media (max-width: 480px) {
+   .container {
+      width: 100vw;
+   }
+
+   /* fazer com que mostre menos paineis em telas pequenas. o terceiro do tipo não vai aparecer. */
+   .panel:nth-of-type(3) {
+      display: none;
+   }
+}
